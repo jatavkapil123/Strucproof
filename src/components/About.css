@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Ensure full screen height */
+  width: 100%; /* Ensure full screen width */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Full-screen Hero Section with decreased height */
+.hero {
+  background: linear-gradient(135deg, #006699, #004466);
+  color: white;
+  text-align: center;
+  padding: 10vh 30px; /* Reduced to 10vh for a shorter header */
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Section base */
+section {
+  width: 100%; /* Ensure sections take full width */
+  margin: 60px auto;
+  padding: 60px 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  max-width: 100%; /* Ensure it doesn't limit width on larger screens */
+}
+
+/* Section headings */
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #00334d;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #0077bb;
+  transition: width 0.4s ease, left 0.4s ease;
+  border-radius: 2px;
+}
+h2:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* About section */
+.about-section p {
+  max-width: 750px;
+  margin: 0 auto 20px;
+}
+
+/* Mission and Vision */
+.mission-vision {
+  background: #e9f3fb;
+}
+.mission-vision ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.mission-vision ul li {
+  background: #cce4fc;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  color: #00334d;
+  font-size: 1.1rem;
+  min-width: 180px;
+  box-shadow: inset 0 0 6px rgba(0,102,153,0.2);
+  transition: transform 0.3s ease;
+}
+.mission-vision ul li:hover {
+  transform: translateY(-5px);
+}
+
+/* Highlights */
+.highlights ul {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+.highlights ul li {
+  margin-bottom: 12px;
+  color: #505050;
+}
+
+//* ===============================
+   Leadership Section Styling
+================================ */
+
+.leadership {
+  background: linear-gradient(135deg, #e9f3fb, #f8fbff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.leadership h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #00334d;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.leadership h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #0077bb;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Leadership Cards Container */
+.leadership-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.leader-card {
+  background: #ffffff;
+  width: 280px;
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Border Effect */
+.leader-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #0077bb, #00c6ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Hover Effect */
+.leader-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Leader Image */
+/* ===== Leadership Photo Adjustment ===== */
+
+.leader-card img {
+  width: 140px;              /* Uniform size */
+  height: 140px;
+  border-radius: 50%;        /* Perfect circle */
+  object-fit: cover;         /* Crop without distortion */
+  object-position: top;      /* Focus on face */
+  border: 5px solid #0077bb;
+  background-color: #e6f2f8; /* Fallback background */
+  padding: 4px;              /* Inner spacing */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover polish */
+.leader-card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Name */
+.leader-card h3 {
+  font-size: 1.4rem;
+  color: #00334d;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Role */
+.leader-card p:nth-of-type(1) {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0077bb;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.leader-card p:nth-of-type(2) {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leader-card {
+    width: 90%;
+  }
+
+  .leadership h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.card {
+  background: white;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0077bb;
+  margin-bottom: 16px;
+}
+.card h3 {
+  font-size: 1.3rem;
+  color: #00334d;
+  margin-bottom: 6px;
+}
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Closing section */
+.closing {
+  background: linear-gradient(135deg, #004466 0%, #00334d 100%);
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 12px;
+  animation: fadeInUp 1s ease forwards;
+}
+.closing h2 {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  animation: pulse 3s infinite;
+}
+.closing p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: wheat;
+}
+
+
+
+/* Hero content center alignment and color styling */
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #e0f7ff; /* Soft light-blue for readability on dark background */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInHero 1.2s ease-out forwards;
+}
+
+.hero-content p:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff; /* Bright white for heading line */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.74);
+}
+.hero-content p:nth-child(2) {
+  font-size: 1.1rem;
+  color: #b3e5ff; /* Softer sky blue */
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+/* Hero fade-in animation */
+@keyframes fadeInHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 8px rgba(255,255,255,0.6); }
+  50% { text-shadow: 0 0 20px rgba(255,255,255,1); }
+  100% { text-shadow: 0 0 8px rgba(255,255,255,0.6); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero .top {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .mission-vision ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+* Vision Section Styling & Animation */
+.vision-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
+    overflow: hidden;
+  }
+  
+  .vision-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text-content {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideFadeInLeft 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .image-content {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideFadeInRight 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .vision-section h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .vision-section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #6366f1;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  .vision-section p {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  
+  .image-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes slideFadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideFadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .vision-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .text-content, .image-content {
+      flex: 1;
+    }
+  
+    .text-content {
+      padding-right: 40px;
+    }
+  }
+  
+
+  /* General Styling for the "Why Choose Us" Section */
+.why-choose-us {
+  background: #f5f5f5;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.reasons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.reason-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reason-icon {
+  font-size: 3rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover .reason-icon {
+  transform: rotate(360deg);
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #0c0c0c;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: hsl(247, 47%, 33%);
+  line-height: 1.5;
+}
+
+/* Fade-In Animation for Reason Cards */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reason-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.reason-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.reason-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.reason-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.reason-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.reason-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.reason-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.reason-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+

@@ -1,0 +1,186 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Container and Section Titles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background: #f9f9f9;
+    padding: 80px 20px;
+  }
+  
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .testimonial-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .testimonial-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-quote {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .testimonial-name {
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .testimonial-details {
+    font-size: 1rem;
+    color: #000;
+  }
+  
+  .review-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .review-btn:hover {
+    background: #357ab7;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    background: #f9f9f9;
+    padding: 80px 20px;
+  }
+  
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .faq-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* FAQ Question */
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  
+  /* Style the actual question text */
+  .faq-question h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+  }
+  
+  .faq-question:hover h4 {
+    color: #4a90e2;
+  }
+  
+  /* FAQ Answer */
+  .faq-answer {
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.6;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Style the actual answer paragraph */
+  .faq-answer p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #000;
+    margin: 0;
+  }
+  
+  /* Toggle visibility */
+  .faq-item .faq-answer {
+    display: none;
+  }
+  
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .testimonial-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .testimonial-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  

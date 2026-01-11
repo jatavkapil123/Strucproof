@@ -1,0 +1,24 @@
+
+
+.top {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.top::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0077b6; /* You can change this to match your brand color */
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+section {
+  scroll-margin-top: 100px; /* adjust based on your navbar height */
+}

@@ -1,0 +1,205 @@
+/* ==============================
+   GLOBAL: Prevent scroll when menu open
+============================== */
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==============================
+   NAVBAR BASE STYLES
+============================== */
+.new-navbar {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.05); /* slight transparency for top view */
+  backdrop-filter: blur(8px);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ✅ SCROLLED STATE — clearly visible */
+.new-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   BRAND SECTION
+============================== */
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.brand-logo h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 15px;
+  background: linear-gradient(to right, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.4s ease;
+}
+
+/* ✅ Adjust brand text color when scrolled */
+.new-navbar.scrolled .brand-logo h2 {
+  -webkit-text-fill-color: #222 !important;
+  background: none;
+  color: #222;
+}
+
+/* ==============================
+   NAV LINKS
+============================== */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links li a {
+  color: orange;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  color: #ff8243;
+  background: #f3f3f5;
+  box-shadow: inset 8px 8px 12px #e2e2e2, inset -8px -8px 12px #ffffff;
+}
+
+/* Active Link Styling */
+.navbar-links li .active {
+  color: #ea2c2c;
+  font-weight: bold;
+}
+
+/* ✅ Adjust link colors when scrolled */
+.new-navbar.scrolled .navbar-links li a {
+  color: #222;
+}
+.new-navbar.scrolled .navbar-links li a:hover {
+  color: red;
+}
+
+/* ==============================
+   HAMBURGER MENU
+============================== */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle span:nth-child(1) { top: 0; }
+.navbar-toggle span:nth-child(2) { top: 10px; }
+.navbar-toggle span:nth-child(3) { top: 20px; }
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* ==============================
+   MOBILE NAV MENU
+============================== */
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  padding: 20px 0;
+  z-index: 9999;
+
+  max-height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.navbar-links.active::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-links.active li {
+  margin: 10px 0;
+}
+
+.navbar-links.active li a {
+  font-size: 1.2rem;
+  padding: 8px 15px;
+}
+
+/* ==============================
+   RESPONSIVE STYLING
+============================== */
+@media (max-width: 600px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+}

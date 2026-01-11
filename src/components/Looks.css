@@ -1,0 +1,186 @@
+/* Basic styling for projects section */
+.projects-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Minimize gap and increase card width */
+  .project-card {
+    width: 100%;
+    max-width: 500px; /* Increase card width */
+    margin: 0 10px; /* Reduce gap between cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .project-info h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .view-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Custom styling for slick carousel */
+  .slick-prev, .slick-next {
+    font-size: 20px;
+    color: #007bff;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    color: #0056b3;
+  }
+  
+  /* Optional: Add extra styling for project cards */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Optional: Custom navigation button placement */
+  .slick-prev {
+    left: -30px;
+  }
+  
+  .slick-next {
+    right: -30px;
+  }
+  
+ 
+
+
+
+
+  /* Styling for the project modal image */
+.project-modal-image {
+    width: 100%;          /* Ensure image takes full width of the modal */
+    height: auto;         /* Maintain aspect ratio */
+    object-fit: contain;  /* Ensures the image fits within the frame without being cropped */
+    max-height: 60vh;     /* Limit height of the image to a reasonable value */
+    border-radius: 8px;   /* Optional: rounded corners for images */
+  }
+  
+  /* Additional styling for the modal itself */
+  .modal-dialog {
+    max-width: 90%;  /* Set a max width for the modal */
+  }
+  
+  .modal-content {
+    border-radius: 15px;  /* Optional: rounded corners for modal */
+  }
+  
+  .modal-header {
+    border-bottom: none;  /* Optional: remove the bottom border of the header */
+  }
+  
+  /* If you'd like to adjust the height of the modal */
+  .modal-body {
+    max-height: 70vh; /* Limit the height of the modal body */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+  }
+  
+  /* Optional: Adjust the size of carousel images for better alignment */
+  .carousel-inner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;  /* Make sure images inside carousel are well-fitted */
+  }
+  
+
+  /* Ensure modal content is centered */
+.modal-dialog {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;  /* Horizontally center the modal */
+    align-items: center;      /* Vertically center the modal */
+  }
+  
+  .modal-content {
+    border-radius: 15px; /* Optional: rounded corners for the modal */
+  }
+  
+  /* Ensure modal body has correct overflow settings */
+  .modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;      /* Center the content vertically */
+    height: 80vh;             /* Ensure the modal body height */
+    overflow: hidden;         /* Hide overflow if the image is too large */
+  }
+  
+  /* Styling for the project modal image */
+  .project-modal-image {
+    width: auto;         /* Allow width to scale */
+    height: 100%;        /* Set height to fill the container */
+    max-width: 100%;     /* Ensure the image doesn't exceed container's width */
+    object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+    display: block;      /* Ensure the image behaves like a block element */
+    margin: 0 auto;      /* Center the image horizontally */
+  }
+  
+  /* Adjust carousel styles for centered images */
+  .carousel-inner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;  /* Ensure images inside carousel are centered */
+  }
+  
