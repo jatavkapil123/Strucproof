@@ -11,7 +11,7 @@ import {
   FaWarehouse,
   FaWrench
 } from "react-icons/fa";
-import "./Services.css";
+import "./services.css";
 
 const ServiceCard = ({ title, Icon, iconColor, index }) => {
   return (

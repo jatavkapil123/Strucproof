@@ -463,32 +463,306 @@
 /* =======================
    RESPONSIVE DESIGN
 ======================= */
-@media (max-width: 600px) {
+
+/* Large tablets */
+@media (max-width: 1199px) {
   .projects-container {
-    padding: 50px 15px;
+    width: 98%;
+    max-width: 1300px;
+    padding: 50px 0;
+  }
+
+  .slider-wrapper {
+    padding: 0 50px;
+  }
+
+  .project-card {
+    max-width: 320px;
+    min-height: 420px;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .industry-card {
+    padding: 25px 18px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 40px 0;
+    width: 100%;
+  }
+
+  .slider-wrapper {
+    padding: 0 30px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .project-card {
+    max-width: 280px;
+    min-height: 400px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+  
+  .project-info {
+    padding: 18px 15px;
+  }
+  
+  .project-info h5 {
+    font-size: 1.15rem;
+  }
+  
+  .project-info .project-sub {
+    font-size: 0.95rem;
+  }
+  
+  .project-info .project-details {
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .industry-card {
+    padding: 20px 15px;
+  }
+  
+  .industry-icon {
+    font-size: 2.5rem;
+  }
+  
+  .industry-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .industry-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 30px 0;
+    margin: 40px auto;
+  }
+
+  .slider-wrapper {
+    padding: 0 20px;
   }
 
   .slick-prev {
-    left: -25px;
+    left: 5px;
   }
 
   .slick-next {
-    right: -25px;
+    right: 5px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .project-card {
+    max-width: 260px;
+    min-height: 380px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-info {
+    padding: 15px 12px;
   }
 
   .project-info h5 {
     font-size: 1.1rem;
   }
 
-  .project-info p {
-    font-size: 0.95rem;
+  .project-info .project-sub {
+    font-size: 0.9rem;
   }
 
+  .project-info .project-details {
+    font-size: 0.85rem;
+  }
+  
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-description {
+    font-size: 0.95rem;
+    padding: 0 5px;
   }
 
   .industry-card {
-    padding: 20px 15px;
+    padding: 18px 12px;
+  }
+  
+  .industry-icon {
+    font-size: 2.2rem;
+  }
+  
+  .industry-card h4 {
+    font-size: 1rem;
+  }
+  
+  .industry-card p {
+    font-size: 0.9rem;
+  }
+  
+  .our-process {
+    padding: 60px 15px;
+  }
+  
+  .process-step {
+    padding: 30px 20px;
+  }
+  
+  .process-icon {
+    font-size: 3rem;
+  }
+  
+  .process-step h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .projects-container {
+    padding: 25px 0;
+    margin: 30px auto;
+  }
+
+  .slider-wrapper {
+    padding: 0 15px;
+  }
+
+  .slick-prev {
+    left: 2px;
+  }
+
+  .slick-next {
+    right: 2px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .project-card {
+    max-width: 240px;
+    min-height: 360px;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+  
+  .project-info {
+    padding: 12px 10px;
+  }
+
+  .project-info h5 {
+    font-size: 1rem;
+  }
+
+  .project-info .project-sub {
+    font-size: 0.85rem;
+  }
+
+  .project-info .project-details {
+    font-size: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .industry-card {
+    padding: 15px 10px;
+  }
+  
+  .industry-icon {
+    font-size: 2rem;
+  }
+  
+  .industry-card h4 {
+    font-size: 0.95rem;
+  }
+  
+  .industry-card p {
+    font-size: 0.85rem;
+  }
+  
+  .our-process {
+    padding: 50px 10px;
+  }
+  
+  .process-step {
+    padding: 25px 15px;
+  }
+  
+  .process-icon {
+    font-size: 2.8rem;
+  }
+  
+  .process-step h4 {
+    font-size: 1rem;
   }
 }

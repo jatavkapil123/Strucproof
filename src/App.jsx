@@ -4,7 +4,7 @@ import Slider from "./components/Slider";
 import Aboutus from "./components/Aboutus";
 import Why from "./components/Why";
 import CompanyProducts from "./components/CompanyProducts";
-import Services from "./components/Services";
+import Services from "./components/services";
 import Project from "./components/Project";
 import TestimonialsFAQ from "./components/TestimonialsFAQ";
 import ContactUs from "./components/ContactUs";

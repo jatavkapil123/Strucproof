@@ -7,7 +7,7 @@ import {
   FaBuilding, FaStore, FaHome, FaIndustry, FaCity, FaHouseUser,
   FaSearch, FaClipboardList, FaTools, FaCheckCircle, FaShieldAlt, FaHeadset
 } from 'react-icons/fa';
-import "./Project.css";
+import "./project.css";
 
 // ------------------- PROJECT DATA -------------------
 const projects = [

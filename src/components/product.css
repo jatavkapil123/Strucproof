@@ -260,23 +260,265 @@ body.modal-open {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+
+/* Large tablets */
+@media (max-width: 1199px) {
+  .company-products-container {
+    max-width: 1000px;
+    padding: 50px 18px;
+    margin: 50px auto;
+  }
+  
+  #Products {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .products-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  
   .company-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .company-card {
+    width: 220px;
+    height: 280px;
+    padding: 18px;
+  }
+  
+  .company-logo {
+    height: 180px;
+  }
+  
+  .company-name {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+  
+  .product-modal {
+    max-width: 600px;
+    padding: 35px;
+  }
+  
+  .modal-logo {
+    width: 130px;
+    height: 130px;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  .company-products-container {
+    max-width: 600px;
+    padding: 40px 15px;
+    margin: 40px auto;
+  }
+  
+  #Products {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .products-subtitle {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  
   .company-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .company-card {
+    width: 200px;
+    height: 260px;
+    padding: 15px;
+  }
+  
+  .company-logo {
+    height: 160px;
+  }
+  
+  .company-name {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+  
+  .product-modal {
+    width: 95%;
+    max-width: 500px;
+    padding: 30px;
+    max-height: 75vh;
+  }
+  
+  .modal-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+  
+  .product-modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .product-description {
+    font-size: 0.95rem;
+  }
+  
+  .product-section h4 {
+    margin-top: 12px;
   }
 }
 
+/* Mobile devices */
 @media (max-width: 480px) {
+  .company-products-container {
+    max-width: 400px;
+    padding: 30px 12px;
+    margin: 30px auto;
+    border-radius: 20px;
+  }
+  
+  #Products {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+  
+  .products-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  
   .company-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
+  
   .company-card {
     width: 90%;
+    max-width: 300px;
+    height: 240px;
+    padding: 12px;
+  }
+  
+  .company-logo {
+    height: 140px;
+  }
+  
+  .company-name {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  .product-modal {
+    width: 98%;
+    max-width: 380px;
+    padding: 25px 20px;
+    max-height: 70vh;
+    border-radius: 15px;
+  }
+  
+  .modal-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+  
+  .close-btn {
+    top: 12px;
+    right: 15px;
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+  
+  .product-modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .product-section h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .product-section ul {
+    margin-left: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .company-products-container {
+    max-width: 350px;
+    padding: 25px 10px;
+    margin: 25px auto;
+  }
+  
+  #Products {
+    font-size: 1.6rem;
+  }
+  
+  .products-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .company-card {
+    width: 95%;
+    max-width: 280px;
+    height: 220px;
+    padding: 10px;
+  }
+  
+  .company-logo {
+    height: 120px;
+  }
+  
+  .company-name {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+  
+  .product-modal {
+    width: 99%;
+    max-width: 340px;
+    padding: 20px 15px;
+    max-height: 65vh;
+  }
+  
+  .modal-logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  
+  .product-modal h2 {
+    font-size: 1.3rem;
+  }
+  
+  .product-description {
+    font-size: 0.85rem;
+  }
+  
+  .product-section h4 {
+    font-size: 0.95rem;
+  }
+  
+  .product-section ul {
+    margin-left: 15px;
+    font-size: 0.85rem;
   }
 }

@@ -1,5 +1,20 @@
 
 
+/* Global responsive styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .top {
   font-size: 2rem;
   font-weight: 700;
@@ -14,11 +29,32 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #0077b6; /* You can change this to match your brand color */
+  background-color: #0077b6;
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
 
 section {
-  scroll-margin-top: 100px; /* adjust based on your navbar height */
+  scroll-margin-top: 100px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .top {
+    font-size: 1.8rem;
+  }
+  
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top {
+    font-size: 1.5rem;
+  }
+  
+  section {
+    scroll-margin-top: 70px;
+  }
 }

@@ -1,7 +1,6 @@
 import React from "react";
-import { Row, Col, Container } from "reactstrap";
-import { FaUsers, FaTools, FaTag, FaHeadset,FaShieldAlt } from "react-icons/fa";
-import "./why.css"; // Import the CSS file
+import { FaUsers, FaTools, FaTag, FaHeadset, FaShieldAlt } from "react-icons/fa";
+import "./why.css";
 
 const Why = () => {
   const cards = [
@@ -43,25 +42,23 @@ const Why = () => {
   ];
 
   return (
-    <div className="why-choose-us-section">
-      <Container>
-      <h1 className="top">Why Choose Us</h1>
-        <Row className="justify-content-center">
-        <div className="why-choose-us-container">
-  {cards.map((item, index) => (
-    <div key={index} className="why-choose-us-card">
-      <div className="why-choose-us-icon-container" style={{ backgroundColor: item.backgroundColor }}>
-        <div className="why-choose-us-icon">{item.icon}</div>
+    <section className="why-choose-us-section">
+      <h1 className="top why-choose-us-title">Why Choose Us</h1>
+      <div className="why-choose-us-container">
+        {cards.map((item, index) => (
+          <div key={index} className="why-choose-us-card">
+            <div 
+              className="why-choose-us-icon-container" 
+              style={{ backgroundColor: item.backgroundColor }}
+            >
+              <div className="why-choose-us-icon">{item.icon}</div>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </div>
-      <h3 className="why-choose-us-card-title">{item.title}</h3>
-      <p className="why-choose-us-card-description">{item.description}</p>
-    </div>
-  ))}
-</div>
-
-        </Row>
-      </Container>
-    </div>
+    </section>
   );
 };
 

@@ -182,7 +182,45 @@ body.menu-open {
 /* ==============================
    RESPONSIVE STYLING
 ============================== */
-@media (max-width: 600px) {
+
+/* Large tablets and small desktops */
+@media (max-width: 1199px) {
+  .new-navbar {
+    height: 100px;
+    padding: 0 25px;
+  }
+  
+  .brand-img {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .brand-logo h2 {
+    font-size: 2.2rem;
+  }
+  
+  .navbar-links li a {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .new-navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  .brand-img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .brand-logo h2 {
+    font-size: 1.8rem;
+  }
+  
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -193,13 +231,66 @@ body.menu-open {
   }
 }
 
-@media (min-width: 601px) {
+/* Mobile devices */
+@media (max-width: 480px) {
+  .new-navbar {
+    height: 70px;
+    padding: 0 15px;
+  }
+  
+  .brand-img {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+  }
+  
+  .brand-logo h2 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  
+  .navbar-toggle {
+    width: 25px;
+    height: 20px;
+  }
+  
+  .navbar-toggle span {
+    height: 3px;
+  }
+  
+  .navbar-links.active li a {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .new-navbar {
+    height: 65px;
+    padding: 0 12px;
+  }
+  
+  .brand-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 8px;
+  }
+  
+  .brand-logo h2 {
+    font-size: 1.3rem;
+    margin-left: 8px;
+  }
+}
+
+/* Show/hide logic for different screen sizes */
+@media (min-width: 769px) {
   .navbar-links {
-    display: flex;
+    display: flex !important;
     gap: 30px;
   }
 
   .navbar-toggle {
-    display: none;
+    display: none !important;
   }
 }
