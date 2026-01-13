@@ -52,8 +52,7 @@ const Look = () => {
     focusOnSelect: true,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 2000, // Slide every 2 seconds (2000 milliseconds)
-    nextArrow: <button className="slick-next">Next</button>, // Custom next button
-    prevArrow: <button className="slick-prev">Prev</button>, // Custom previous button
+    arrows: false, // Completely disable all arrows
     responsive: [
       {
         breakpoint: 1024,

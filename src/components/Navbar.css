@@ -25,6 +25,21 @@ body.menu-open {
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Responsive navbar heights */
+@media (max-width: 768px) {
+  .new-navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-navbar {
+    height: 65px;
+    padding: 0 15px;
+  }
+}
+
 /* ✅ SCROLLED STATE — clearly visible */
 .new-navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.97);
@@ -47,15 +62,63 @@ body.menu-open {
   margin-left: 15px;
 }
 
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .brand-img {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-img {
+    width: 60px;
+    height: 60px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+}
+
 .brand-logo h2 {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 15px;
-  background: blue;
+  background: #2395bb;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: color 0.4s ease;
+}
+
+/* Responsive brand text sizing */
+@media (max-width: 768px) {
+  .brand-logo h2 {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo h2 {
+    font-size: 1.5rem;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-logo h2 {
+    font-size: 1.3rem;
+    margin-left: 5px;
+  }
 }
 
 /* ✅ Adjust brand text color when scrolled */
@@ -63,6 +126,53 @@ body.menu-open {
   -webkit-text-fill-color: #222 !important;
   background: none;
   color: #222;
+}
+
+/* ==============================
+   MOBILE HAMBURGER MENU
+============================== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10001;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: blue;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .navbar-toggle span {
+    background-color: blue;
+  }
+  
+  .new-navbar.scrolled .navbar-toggle span {
+    background-color: #222;
+  }
 }
 
 /* ==============================
@@ -78,17 +188,86 @@ body.menu-open {
   white-space: nowrap;
 }
 
+/* Mobile menu styling */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-links.active {
+    right: 0;
+  }
+  
+  .new-navbar.scrolled .navbar-links {
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    top: 65px;
+    height: calc(100vh - 65px);
+  }
+}
+
 .navbar-links li {
   display: inline-block;
 }
 
 .navbar-links li a {
-  color: blue;
+  color: #2395bb;
   text-decoration: none;
   font-size: 1.5rem;
   padding: 10px 15px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
+  display: block;
+  min-height: 44px; /* Touch-friendly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile link styling */
+@media (max-width: 768px) {
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .navbar-links li a {
+    font-size: 1.3rem;
+    padding: 15px 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .new-navbar.scrolled .navbar-links li a {
+    color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links li a {
+    font-size: 1.2rem;
+    padding: 12px 18px;
+  }
 }
 
 .navbar-links li a:hover {

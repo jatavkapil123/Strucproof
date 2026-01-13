@@ -9,7 +9,7 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import "./ContactUs.css";
+import "./Contactus.css";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

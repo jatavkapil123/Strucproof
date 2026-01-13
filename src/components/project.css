@@ -123,6 +123,28 @@
   flex-direction: column;
 }
 
+/* Responsive project cards */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 280px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    max-width: 260px;
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-card {
+    max-width: 240px;
+    min-height: 360px;
+  }
+}
+
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -133,6 +155,25 @@
   height: 240px;
   object-fit: cover;
   border-bottom: 1px solid #e5e7eb;
+}
+
+/* Responsive project images */
+@media (max-width: 768px) {
+  .project-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-image {
+    height: 160px;
+  }
 }
 
 .project-info {
@@ -161,40 +202,10 @@
   line-height: 1.5;
 }
 
-/* Slick arrows */
+/* Slick arrows - HIDE ALL ARROWS */
 .slick-prev,
 .slick-next {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  z-index: 5;
-  background: #1e3a8a;
-  color: #fff !important;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 22px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background: #2563eb;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.slick-prev {
-  left: 15px;
-}
-
-.slick-next {
-  right: 15px;
+  display: none !important; /* Completely hide all arrows */
 }
 
 /* Dots */
@@ -221,12 +232,7 @@
     padding: 0 30px;
   }
 
-  .slick-prev,
-  .slick-next {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
+  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 280px;
@@ -485,12 +491,7 @@
     height: 220px;
   }
 
-  .slick-prev,
-  .slick-next {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
+  /* Arrow styles removed - arrows are hidden */
   
   .section-title {
     font-size: 2.2rem;
@@ -512,12 +513,7 @@
     padding: 0 30px;
   }
 
-  .slick-prev,
-  .slick-next {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
+  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 280px;
@@ -586,19 +582,10 @@
   }
 
   .slick-prev {
-    left: 5px;
+    /* Arrow positioning removed - arrows are hidden */
   }
 
-  .slick-next {
-    right: 5px;
-  }
-
-  .slick-prev,
-  .slick-next {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
+  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 260px;
@@ -682,20 +669,7 @@
     padding: 0 15px;
   }
 
-  .slick-prev {
-    left: 2px;
-  }
-
-  .slick-next {
-    right: 2px;
-  }
-
-  .slick-prev,
-  .slick-next {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
+  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 240px;

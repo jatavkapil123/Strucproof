@@ -43,45 +43,6 @@ const projects = [
   },
 ];
 
-// ------------------- CUSTOM ARROWS -------------------
-const NextArrow = ({ className, style, onClick }) => (
-  <button
-    className={className}
-    style={{
-      ...style,
-      display: "block",
-      background: "#007bff",
-      color: "#fff",
-      borderRadius: "50%",
-      border: "none",
-      width: "40px",
-      height: "40px",
-    }}
-    onClick={onClick}
-  >
-    ›
-  </button>
-);
-
-const PrevArrow = ({ className, style, onClick }) => (
-  <button
-    className={className}
-    style={{
-      ...style,
-      display: "block",
-      background: "#007bff",
-      color: "#fff",
-      borderRadius: "50%",
-      border: "none",
-      width: "40px",
-      height: "40px",
-    }}
-    onClick={onClick}
-  >
-    ‹
-  </button>
-);
-
 // ------------------- MAIN COMPONENT -------------------
 const Project = () => {
   const [animate, setAnimate] = useState(false);
@@ -101,8 +62,7 @@ const Project = () => {
     focusOnSelect: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    arrows: false, // Completely disable all arrows
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },

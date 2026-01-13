@@ -55,18 +55,9 @@
   }
   
   /* Custom styling for slick carousel */
+  /* Arrow styles removed - arrows are hidden */
   .slick-prev, .slick-next {
-    font-size: 20px;
-    color: #007bff;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .slick-prev:hover, .slick-next:hover {
-    color: #0056b3;
+    display: none !important;
   }
   
   /* Optional: Add extra styling for project cards */
@@ -75,14 +66,7 @@
     justify-content: center;
   }
   
-  /* Optional: Custom navigation button placement */
-  .slick-prev {
-    left: -30px;
-  }
-  
-  .slick-next {
-    right: -30px;
-  }
+  /* Arrow positioning removed - arrows are hidden */
   
  
 

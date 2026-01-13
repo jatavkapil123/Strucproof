@@ -54,8 +54,30 @@
   justify-items: center;
   align-items: center;
   position: relative;
-    gap: 35px;
+  gap: 35px;
   z-index: 2;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* Product Card */
@@ -72,6 +94,40 @@
   overflow: hidden;
   transition: all 0.4s ease;
   transform: translateY(0);
+}
+
+/* Responsive product cards */
+@media (max-width: 1024px) {
+  .company-card {
+    width: 220px;
+    height: 280px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-card {
+    width: 200px;
+    height: 260px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-card {
+    width: 90%;
+    max-width: 280px;
+    height: 240px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .company-card {
+    width: 95%;
+    height: 220px;
+    padding: 12px;
+  }
 }
 
 .company-card:hover {
