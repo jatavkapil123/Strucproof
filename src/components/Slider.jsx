@@ -33,10 +33,10 @@ const Slider = () => {
           Chemical Waterproofing
         </p>
 
-        <div className="hero-sub-text">
+        {/* <div className="hero-sub-text">
           From high-rise buildings to industrial sheds, we provide waterproofing that lasts —<br />
           backed by 35+ years of proven expertise and a 10-year service warranty.
-        </div>
+        </div> */}
         <a href="#ContactUs" className="hero-btn">
   Explore More
 </a>
