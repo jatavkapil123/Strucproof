@@ -1,7 +1,6 @@
 /* 🌈 Container Section */
 .company-products-container {
   width: 100%;
-  max-width: 1200px;
   margin: 60px auto;
   padding: 60px 20px;
   background: linear-gradient(135deg, #e8f0ff, #ffffff, #e8f0ff);
@@ -52,10 +51,10 @@
 .company-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
   justify-items: center;
   align-items: center;
   position: relative;
+    gap: 35px;
   z-index: 2;
 }
 

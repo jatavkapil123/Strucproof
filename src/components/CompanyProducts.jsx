@@ -305,7 +305,7 @@ const CompanyProducts = () => {
 
   return (
     <div className="company-products-container">
-      <h1 id="Products">Our Company Products</h1>
+      <h1 id="Products"> Company Products</h1>
       <p className="products-subtitle">
         Discover our range of high-performance construction chemicals designed
         for lasting protection and strength.

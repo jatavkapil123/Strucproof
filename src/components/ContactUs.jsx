@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input, Alert } from "reactstrap";
 import { send } from "@emailjs/browser";
-import "./Contactus.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMapMarkerAlt,
+  faPhoneAlt,
+  faEnvelope,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import "./ContactUs.css";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -15,14 +23,13 @@ const ContactUs = () => {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
-  const [fileError, setFileError] = useState(""); // For file size error
+  const [fileError, setFileError] = useState("");
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-
     if (name === "file") {
       if (files[0]) {
-        const fileSizeKB = files[0].size / 1024; // size in KB
+        const fileSizeKB = files[0].size / 1024;
         if (fileSizeKB > 50) {
           setFileError("File size must be less than 50KB");
           setFormData({ ...formData, file: null });
@@ -39,7 +46,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -52,7 +58,7 @@ const ContactUs = () => {
     if (formData.file) {
       const reader = new FileReader();
       reader.onload = function () {
-        templateParams.attachment = reader.result.split(",")[1]; // Base64
+        templateParams.attachment = reader.result.split(",")[1];
         sendEmail(templateParams);
       };
       reader.readAsDataURL(formData.file);
@@ -63,13 +69,15 @@ const ContactUs = () => {
 
   const sendEmail = (templateParams) => {
     send(
-      "service_jqycguj",        // Your Gmail API Service ID
-      "template_ieeynwf",       // Your Template ID
+      "service_jqycguj",
+      "template_ieeynwf",
       templateParams,
-      "rCJQFoO9ED4ohcVnf"      // Your Public Key
+      "rCJQFoO9ED4ohcVnf"
     )
       .then(() => {
-        setSuccessMessage("Thank you! Your message has been sent successfully.");
+        setSuccessMessage(
+          "Thank you! Your message has been sent successfully."
+        );
         setFormData({
           name: "",
           mobile: "",
@@ -82,28 +90,26 @@ const ContactUs = () => {
       })
       .catch((err) => {
         console.error("EmailJS error:", err);
-        setSuccessMessage("Oops! Something went wrong. Please try again later.");
+        setSuccessMessage(
+          "Oops! Something went wrong. Please try again later."
+        );
       });
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-title">
-        <h1>Contact Us</h1>
-      </div>
+    <div className="contact-main">
+      <h2 className="section-title">Get In Touch</h2>
 
-      <div className="contact-wrapper">
-        {/* Left Section: Contact Form */}
-        <div className="contact-form">
-          <h2>Fill Out the Contact Form:</h2>
-
+      <div className="contact-section">
+        {/* Left: Contact Form */}
+        <div className="contact-left">
+          <h3 className="sub-title">Contact Us</h3>
           {successMessage && (
             <Alert color="success" className="contact-alert">
               {successMessage}
             </Alert>
           )}
-
-          <Form onSubmit={handleSubmit}>
+          <Form className="contact-form" onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="name">Full Name</Label>
               <Input
@@ -168,9 +174,8 @@ const ContactUs = () => {
               />
             </FormGroup>
 
-            {/* File Upload */}
             <FormGroup>
-              <Label for="file">Upload File (Image / PDF, max 50KB)</Label>
+              <Label for="file">Upload File (max 50KB)</Label>
               <Input
                 type="file"
                 id="file"
@@ -198,36 +203,40 @@ const ContactUs = () => {
               />
             </FormGroup>
 
-            <Button color="primary" type="submit" className="contact-button">
+            <Button className="contact-button" type="submit">
               Send Message
             </Button>
           </Form>
         </div>
 
-        {/* Right Section: Contact Details */}
-        <div className="contact-details">
-          <h2>Contact Details</h2>
-          <div className="contact-info">
-            <ul>
+        {/* Right: Contact Details */}
+        <div className="contact-right">
+          <h3 className="sub-title">Contact Details</h3>
+          <div className="contact-card">
+            <ul className="contact-info">
               <li>
-                <i className="fas fa-map-marker-alt"></i>
-                SHOP NO. 3, MAHALAXMI COMPLEX, KRISHNA NAKA, KARAD-415110
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
+                <span>SHOP NO. 3, MAHALAXMI COMPLEX, KRISHNA NAKA, KARAD-415110</span>
               </li>
               <li>
-                <i className="fas fa-map-marker-alt"></i>
-                6/B, GHANDHI CHOWK, NEAR TALATHI OFFICE, HADAPSAR GAON, PUNE-411028
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
+                <span>6/B, GHANDHI CHOWK, NEAR TALATHI OFFICE, HADAPSAR GAON, PUNE-411028</span>
               </li>
               <li>
-                <i className="fas fa-phone-alt"></i> 9371507666 / 7767977177
+                <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
+                <span>+91 77679 77177</span>
               </li>
               <li>
-                <i className="fab fa-whatsapp"></i> 9371507666
+                <FontAwesomeIcon icon={faWhatsapp} className="icon" />
+                <span>+91 97653 37555</span>
               </li>
               <li>
-                <i className="fas fa-envelope"></i> strucproof666@gmail.com
+                <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                <span>strucproof666@gmail.com</span>
               </li>
               <li>
-                <i className="fas fa-globe"></i> STRUCPROOF.COM
+                <FontAwesomeIcon icon={faGlobe} className="icon" />
+                <span>www.strucproof.com</span>
               </li>
             </ul>
           </div>

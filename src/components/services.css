@@ -1,496 +1,200 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #f0f4f8;
   color: #333;
 }
 
-/* Services Container */
+/* Container */
 .services-container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  padding: 60px 20px;
   text-align: center;
-}
-
-/* Services Header */
-.services-content {
-  width: 100%;
-  max-width: 850px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-/* Logo Container with Enhanced Design */
-.services-logo-container {
-  width: 180px;
-  height: 180px;
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  box-shadow: 
-    0 8px 32px rgba(0, 123, 255, 0.15),
-    0 4px 16px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+  overflow-x: hidden;
 }
 
-/* Animated gradient border */
-.services-logo-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 3px;
-  background: linear-gradient(45deg, #007bff, #00d4ff, #007bff, #0056b3);
-  background-size: 300% 300%;
-  border-radius: 25px;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  animation: borderRotate 3s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.services-logo-container:hover::before {
-  opacity: 1;
-}
-
-/* Hover effects */
-.services-logo-container:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 
-    0 20px 40px rgba(0, 123, 255, 0.25),
-    0 8px 24px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-}
-
-/* Logo image styling */
-.services-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 12px;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 8px rgba(0, 123, 255, 0.2));
-}
-
-.services-logo-container:hover .services-logo {
-  transform: scale(1.1) rotate(5deg);
-  filter: drop-shadow(0 4px 12px rgba(0, 123, 255, 0.4));
-}
-
-/* Brand text styling */
-.services-brand {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #007bff;
-  letter-spacing: 1.5px;
+/* Page Title */
+.services-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
   text-transform: uppercase;
-  text-align: center;
-  line-height: 1.2;
-  transition: all 0.3s ease;
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: 1.5px;
+  color: #1e3a8a;
 }
 
-.services-logo-container:hover .services-brand {
-  letter-spacing: 2px;
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #0056b3, #007bff, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Floating particles effect */
-.services-logo-container::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 4px;
-  height: 4px;
-  background: radial-gradient(circle, #007bff, transparent);
-  border-radius: 50%;
-  opacity: 0;
-  animation: floatingParticles 2s ease-in-out infinite;
-}
-
-/* Keyframe animations */
-@keyframes borderRotate {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes floatingParticles {
-  0%, 100% {
-    opacity: 0;
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translateY(-20px) scale(1.2);
-  }
-}
-
-/* Pulse effect on load */
-@keyframes logoPulse {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.services-logo-container {
-  animation: logoPulse 0.8s ease-out;
-}
-
-/* Service Cards Grid */
+/* Services Grid */
 .services-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   justify-content: center;
-  margin-top: 40px;
 }
 
-/* Individual Service Card with Bold Colors and Hover Animation */
+/* Individual Service Card */
 .service-card {
   width: 250px;
-  height: 250px;
-  border-radius: 12px;
-  background: linear-gradient(45deg, #ff6f61, #ffb74d, #4caf50, #4db6ac, #8e44ad);
-  background-size: 300% 300%;
-  animation: gradientMove 5s linear infinite;
-  padding: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(145deg, #ffffff, #e6eaf0);
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.service-card-content {
+.service-card h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+/* Blur effect */
+.service-card.blurred {
+  filter: blur(4px) brightness(0.65);
+  pointer-events: none;
+  transition: filter 0.3s ease;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  border-radius: 10px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+/* Slide Panel */
+.slide-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 850px;
+  height: auto; /* fit content */
+  background: rgba(30, 58, 138, 0.95); /* Dark blue with slight transparency */
+  backdrop-filter: blur(12px);         /* subtle glass effect */
+  border-radius: 20px;
+  padding: 45px 40px;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.4);
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack text above images */
+  gap: 30px;
+  color: #f0f4f8; /* default text color inside panel */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Text Section */
+.slide-panel .panel-text {
+  text-align: left; /* modern left-aligned */
+}
+
+.slide-panel .panel-text h3 {
+  font-family: 'Montserrat', sans-serif; /* premium font */
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #ffdd57; /* gold-like accent for title */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.slide-panel .panel-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #e0e6f0; /* lighter text for contrast */
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Images Section */
+.slide-panel .panel-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  color: #333;
 }
 
-/* Ensuring Card Title Visibility */
-.service-card-content h4 {
-  font-size: 20px;
-  color: #333; /* Ensure the text color is dark enough for visibility */
-  margin: 15px 0;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.service-card-content p {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Animated Gradient Effect */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Service Title & Description */
-.services-description {
-  text-align: center;
-  padding: 20px;
-}
-
-.services-description h3 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.services-description p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.services-description ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.services-description li {
-  font-size: 16px;
-  color: #444;
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-/* Service Item Hover Effects (Optional: For individual service list items) */
-.services-description li:hover {
-  color: #007bff;
-  font-weight: bold;
+.slide-panel .panel-images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
   cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide-panel .panel-images img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Close Button */
+.slide-panel .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4d6d; /* bright red for close */
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
-/* Mobile Responsiveness */
+.slide-panel .close-btn:hover {
+  color: #ffd93d; /* golden hover */
+}
 
-/* Large tablets */
-@media (max-width: 1199px) {
-  .services-container {
-    padding: 40px 15px;
-    gap: 35px;
-  }
-  
-  .services-logo-container {
-    width: 160px;
-    height: 160px;
-    border-radius: 22px;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .slide-panel {
+    width: 90%;
+    padding: 35px 25px;
   }
 
-  .services-logo {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .services-brand {
-    font-size: 16px;
-    letter-spacing: 1.2px;
-  }
-  
-  .services-grid {
-    gap: 35px;
-  }
-
-  .service-card {
-    width: 220px;
-    height: 220px;
-  }
-  
-  .services-description h3 {
-    font-size: 28px;
+  .panel-images img {
+    width: 130px;
+    height: 90px;
   }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
-  .services-container {
-    padding: 35px 15px;
-    gap: 30px;
-  }
-  
-  .services-logo-container {
-    width: 140px;
-    height: 140px;
-    border-radius: 20px;
-  }
-
-  .services-logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .services-brand {
-    font-size: 15px;
-    letter-spacing: 1px;
-  }
-  
-  .services-grid {
-    gap: 25px;
-  }
-
-  .service-card {
-    width: 200px;
-    height: 200px;
-  }
-
-  .service-card-content {
-    font-size: 18px;
-    padding: 8px;
-  }
-  
-  .service-card-content h4 {
-    font-size: 18px;
-  }
-
-  .services-description h3 {
-    font-size: 24px;
-  }
-
-  .services-description p {
-    font-size: 16px;
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-  .services-container {
-    padding: 25px 10px;
-    gap: 25px;
-  }
-  
-  .services-logo-container {
-    width: 120px;
-    height: 120px;
-    border-radius: 18px;
-  }
-
-  .services-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 8px;
-  }
-  
-  .services-brand {
-    font-size: 13px;
-    letter-spacing: 0.8px;
-  }
-  
-  .services-grid {
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .service-card-content {
-    font-size: 16px;
-    padding: 6px;
-  }
-  
-  .service-card-content h4 {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  .service-card-content p {
-    font-size: 12px;
-  }
-
-  .services-description h3 {
-    font-size: 20px;
-  }
-
-  .services-description p {
-    font-size: 14px;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 360px) {
-  .services-container {
-    padding: 20px 8px;
-  }
-  
-  .services-logo-container {
+  .panel-images img {
     width: 110px;
-    height: 110px;
-    border-radius: 16px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-panel {
+    width: 95%;
+    padding: 30px 20px;
   }
 
-  .services-logo {
-    width: 45px;
-    height: 45px;
-    margin-bottom: 6px;
-  }
-  
-  .services-brand {
-    font-size: 12px;
-    letter-spacing: 0.5px;
-  }
-
-  .service-card {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .service-card-content {
-    font-size: 14px;
-    padding: 5px;
-  }
-  
-  .service-card-content h4 {
-    font-size: 14px;
-    margin: 8px 0;
-  }
-  
-  .service-card-content p {
-    font-size: 11px;
-  }
-
-  .services-description h3 {
-    font-size: 18px;
-  }
-
-  .services-description p {
-    font-size: 13px;
+  .panel-images img {
+    width: 90px;
+    height: 60px;
   }
 }

@@ -41,7 +41,7 @@ const Footer = () => {
           </p>
           <div className="footer__contact-info">
             <div className="footer__contact-item">
-              <FaPhone /> <span>+91 97653 37555</span>
+              <FaPhone /> <span>+91 93715 07666</span>
             </div>
             <div className="footer__contact-item">
               <FaEnvelope /> <span>info@strucproof.com</span>

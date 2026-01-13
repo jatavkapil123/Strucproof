@@ -71,7 +71,6 @@ const TestimonialsFAQ = () => {
               </div>
             ))}
           </div>
-          <button className="review-btn">Want to leave a review? [Click here]</button>
         </div>
       </section>
 

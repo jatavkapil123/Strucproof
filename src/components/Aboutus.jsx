@@ -87,26 +87,40 @@ const Aboutus = () => {
         </div>
       </section>
 
-      <section className="vision-section">
-            <div className="vision-content">
-              <div className="text-content fade-in-left">
-                <h2>Our Vision</h2>
-                <p>
-                  At <strong>STRUCPROOF</strong>, we believe in building digital
-                  experiences that inspire. We blend innovative design with
-                  cutting-edge technology to deliver results that matter.
-                </p>
-                <p>
-                  Our goal is to empower brands through visually striking, responsive
-                  interfaces that leave lasting impressions and drive user
-                  engagement.
-                </p>
-              </div>
-              <div className="image-content fade-in-right">
-                <img src={visionImage} alt="Vision" />
-              </div>
-            </div>
-          </section>
+  <section className="vision-section">
+  <h2 className="vision-title">Our Vision</h2>
+
+  <div className="vision-content">
+
+    {/* Image Side */}
+    <div className="image-content fade-in-left">
+      <img src={visionImage} alt="Our Vision" />
+    </div>
+
+    {/* Text Side */}
+    <div className="text-content fade-in-right">
+      <p>
+        At <strong>STRUCPROOF</strong>, our vision is to become the most
+        trusted and reliable waterproofing partner across India.
+      </p>
+
+      <p>
+        We believe in delivering long-lasting protection through
+        <span className="highlight"> engineering expertise</span>,
+        <span className="highlight"> premium materials</span>, and
+        <span className="highlight"> honest workmanship</span>.
+      </p>
+
+      <p>
+        Our goal is not only to solve today’s leakage problems but to
+        safeguard structures for generations to come.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
           <section className="why-choose-us">
       <div className="container">
@@ -156,3 +170,4 @@ const Aboutus = () => {
 };
 
 export default Aboutus;
+
