@@ -18,34 +18,19 @@ const ContactUs = () => {
     email: "",
     service: "",
     visitDate: "",
-    file: null,
     message: "",
   });
 
   const [successMessage, setSuccessMessage] = useState("");
-  const [fileError, setFileError] = useState("");
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "file") {
-      if (files[0]) {
-        const fileSizeKB = files[0].size / 1024;
-        if (fileSizeKB > 50) {
-          setFileError("File size must be less than 50KB");
-          setFormData({ ...formData, file: null });
-          return;
-        } else {
-          setFileError("");
-          setFormData({ ...formData, file: files[0] });
-        }
-      }
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -55,24 +40,15 @@ const ContactUs = () => {
       message: formData.message,
     };
 
-    if (formData.file) {
-      const reader = new FileReader();
-      reader.onload = function () {
-        templateParams.attachment = reader.result.split(",")[1];
-        sendEmail(templateParams);
-      };
-      reader.readAsDataURL(formData.file);
-    } else {
-      sendEmail(templateParams);
-    }
+    sendEmail(templateParams);
   };
 
   const sendEmail = (templateParams) => {
     send(
-      "service_jqycguj",
-      "template_ieeynwf",
+      "service_lx2k55r",       // ✅ Your Service ID
+      "template_bbhhdvh",      // ✅ Your Template ID
       templateParams,
-      "rCJQFoO9ED4ohcVnf"
+      "TExgA1KTZMUCNghP7"      // ✅ Your Public Key (updated)
     )
       .then(() => {
         setSuccessMessage(
@@ -84,15 +60,16 @@ const ContactUs = () => {
           email: "",
           service: "",
           visitDate: "",
-          file: null,
           message: "",
         });
+        setTimeout(() => setSuccessMessage(""), 3000);
       })
       .catch((err) => {
         console.error("EmailJS error:", err);
         setSuccessMessage(
           "Oops! Something went wrong. Please try again later."
         );
+        setTimeout(() => setSuccessMessage(""), 3000);
       });
   };
 
@@ -105,10 +82,11 @@ const ContactUs = () => {
         <div className="contact-left">
           <h3 className="sub-title">Contact Us</h3>
           {successMessage && (
-            <Alert color="success" className="contact-alert">
+            <Alert color="success" className="contact-alert" timeout={3000}>
               {successMessage}
             </Alert>
           )}
+
           <Form className="contact-form" onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="name">Full Name</Label>
@@ -175,21 +153,6 @@ const ContactUs = () => {
             </FormGroup>
 
             <FormGroup>
-              <Label for="file">Upload File (max 50KB)</Label>
-              <Input
-                type="file"
-                id="file"
-                name="file"
-                accept="image/*,application/pdf"
-                onChange={handleChange}
-              />
-              {formData.file && (
-                <p className="file-preview">Selected: {formData.file.name}</p>
-              )}
-              {fileError && <p className="file-error">{fileError}</p>}
-            </FormGroup>
-
-            <FormGroup>
               <Label for="message">Message</Label>
               <Input
                 type="textarea"
@@ -216,11 +179,16 @@ const ContactUs = () => {
             <ul className="contact-info">
               <li>
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                <span>SHOP NO. 3, MAHALAXMI COMPLEX, KRISHNA NAKA, KARAD-415110</span>
+                <span>
+                  SHOP NO. 3, MAHALAXMI COMPLEX, KRISHNA NAKA, KARAD-415110
+                </span>
               </li>
               <li>
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                <span>6/B, GHANDHI CHOWK, NEAR TALATHI OFFICE, HADAPSAR GAON, PUNE-411028</span>
+                <span>
+                  6/B, GHANDHI CHOWK, NEAR TALATHI OFFICE, HADAPSAR GAON,
+                  PUNE-411028
+                </span>
               </li>
               <li>
                 <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
