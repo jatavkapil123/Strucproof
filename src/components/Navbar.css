@@ -52,72 +52,84 @@ body.menu-open {
 .brand-logo {
   display: flex;
   align-items: center;
+  gap: 12px; /* Use gap instead of margins for perfect alignment */
 }
 
 .brand-img {
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Reduced from 100px for better proportion */
+  height: 80px;
   object-fit: contain;
   border-radius: 50%;
-  margin-left: 15px;
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 /* Responsive logo sizing */
 @media (max-width: 768px) {
+  .brand-logo {
+    gap: 8px;
+  }
+  
   .brand-img {
-    width: 70px;
-    height: 70px;
-    margin-left: 10px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (max-width: 480px) {
+  .brand-logo {
+    gap: 6px;
+  }
+  
   .brand-img {
-    width: 60px;
-    height: 60px;
-    margin-left: 8px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 @media (max-width: 360px) {
+  .brand-logo {
+    gap: 5px;
+  }
+  
   .brand-img {
-    width: 50px;
-    height: 50px;
-    margin-left: 5px;
+    width: 45px;
+    height: 45px;
   }
 }
 
 .brand-logo h2 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduced from 2.5rem for better proportion */
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: 15px;
+  margin: 0; /* Remove all margins for perfect alignment */
   background: #2395bb;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: color 0.4s ease;
+  letter-spacing: 1px;
+  line-height: 1; /* Perfect vertical alignment */
 }
 
 /* Responsive brand text sizing */
 @media (max-width: 768px) {
   .brand-logo h2 {
-    font-size: 1.8rem;
-    margin-left: 10px;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
   }
 }
 
 @media (max-width: 480px) {
   .brand-logo h2 {
-    font-size: 1.5rem;
-    margin-left: 8px;
+    font-size: 1.4rem;
+    letter-spacing: 0.3px;
   }
 }
 
 @media (max-width: 360px) {
   .brand-logo h2 {
-    font-size: 1.3rem;
-    margin-left: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
   }
 }
 
@@ -134,18 +146,23 @@ body.menu-open {
 .navbar-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
   z-index: 10001;
+  width: 40px; /* Fixed width for consistent alignment */
+  height: 40px; /* Fixed height for consistent alignment */
 }
 
 .navbar-toggle span {
   width: 25px;
   height: 3px;
-  background-color: blue;
-  margin: 3px 0;
+  background-color: #2395bb; /* Match brand color */
+  margin: 2px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
+  display: block;
 }
 
 .navbar-toggle.active span:nth-child(1) {
