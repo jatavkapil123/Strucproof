@@ -18,6 +18,7 @@ const Aboutus = () => {
     {
       name: "Ganesh Rasankar",
       role: "Director",
+      education: "[Diploma, B.E. Civil, MTech (Structure) ].",
       details: "Leading StrucProof with innovation and dedication",
       photo: ganeshImg, // Replace with actual image
     },
@@ -47,8 +48,9 @@ const Aboutus = () => {
       <h1 className="top">About US</h1>
       <div className="hero-content">
           <p>Protecting What You Build for Over 35 Years</p>
-          <p>StrucProof is Maharashtra’s leading name in comprehensive waterproofing solutions, with a proven legacy spanning over 35 years. What began as Rasankar and Sons Waterproofing Services, under the guidance of Founder Chandrakant Rasankar, has grown into a trusted, professional brand led today by Director Ganesh Rasankar [Diploma(Civil Engg.)].
-             Rooted in deep technical expertise and a passion for building protection, we have successfully completed 1500+ projects across the state — protecting everything from residential buildings and commercial complexes to industrial facilities and public infrastructure. With offices in Pune and Karad and a workforce of 50+ trained professionals, STRUCPROOF delivers fast, reliable, and location-specific service across Maharashtra.
+          <p>STRUCPROOF is Maharashtra’s leading name in comprehensive waterproofing solutions, with a proven legacy spanning over 35 years. What began as Rasankar  Waterproofing Services, under the guidance of Founder Chandrakant Rasankar, has grown into a trusted, professional brand led today by Director Ganesh Rasankar.
+             </p>
+             <p>Rooted in deep technical expertise and a passion for building protection, we have successfully completed 1500+ projects across the state — protecting everything from residential buildings and commercial complexes to industrial facilities and public infrastructure. With offices in Pune and Karad and a workforce of 50+ trained professionals, STRUCPROOF delivers fast, reliable, and location-specific service across Maharashtra.
           </p>
           </div>
       </header>
@@ -57,7 +59,7 @@ const Aboutus = () => {
         <div className="container">
           <h2>Who We Are</h2>
           <p>
-            StrucProof is Maharashtra’s leading name in waterproofing solutions, with a 35+ year
+            STRUCPROOF is Maharashtra’s leading name in waterproofing solutions, with a 35+ year
             legacy. Founded by <strong>Chandrakant Rasankar</strong> and now led by{" "}
             <strong>Ganesh Rasankar</strong>, our mission is to protect your buildings with
             expertise, technology, and trust.
@@ -124,7 +126,7 @@ const Aboutus = () => {
 
           <section className="why-choose-us">
       <div className="container">
-        <h2 className="top">When Quality Matters, Choose StrucProof</h2>
+        <h2 className="top">When Quality Matters, Choose STRUCPROOF</h2>
         <div className="reasons-container">
           {reasons.map((reason, index) => (
             <div key={index} className="reason-card">
@@ -144,6 +146,10 @@ const Aboutus = () => {
             <div key={index} className="card leader-card">
               <img src={member.photo} alt={member.name} />
               <h3>{member.name}</h3>
+                      {/* Education (only if available) */}
+      {member.education && (
+        <p className="leader-education">{member.education}</p>
+      )}
               <p>{member.role}</p>
               <p>{member.details}</p>
             </div>
@@ -155,7 +161,7 @@ const Aboutus = () => {
         <div className="container">
           <h2>What Sets Us Apart</h2>
           <p>
-            StrucProof isn’t just a waterproofing company — we’re your partners in peace of mind.
+            STRUCPROOF isn’t just a waterproofing company — we’re your partners in peace of mind.
             Our family-led values and professional practices ensure long-lasting protection and
             hassle-free service.
           </p>

@@ -5,7 +5,7 @@ import './TestimonialsFAQ.css';
 // Testimonials Data
 const testimonials = [
   {
-    quote: 'StrucProof handled our society’s terrace waterproofing with professionalism. No leakage since 8 years!',
+    quote: 'STRUCPROOF handled our society’s terrace waterproofing with professionalism. No leakage since 8 years!',
     name: 'Mr. Mahajan',
     title: 'Society Chairman',
     location: 'Pune',

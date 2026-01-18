@@ -16,7 +16,7 @@ const Footer = () => {
   const services = [
     "Terrace Waterproofing",
     "Basement Protection",
-    "Bathroom Sealing",
+    "Bathroom & W.C",
     "Industrial Solutions",
     "Swimming Pool",
     "Exterior Walls"
@@ -24,8 +24,8 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: <FaInstagram />, href: "https://www.instagram.com/strucproof/", name: "Instagram" },
-    { icon: <FaLinkedin />, href: "www.linkedin.com/in/strucproof-8bba8434a", name: "LinkedIn" },
-    { icon: <FaFacebook />, href: "https://sites.google.com/view/strucproof/home", name: "Facebook" },
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/strucproof-8bba8434a/", name: "LinkedIn" },
+    { icon: <FaFacebook />, href: "https://www.facebook.com/share/17Yik7jmp3/", name: "Facebook" },
     { icon: <FaTwitter />, href: "https://x.com/strucproof/status/1922524032064225648?t=scnGSSFyd1Yq1Frzu-mSNQ&s=19", name: "Twitter" }
 
   ];
@@ -93,7 +93,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="footer__bottom">
-        <p>&copy; {currentYear} StrucProof by Rasankar & Sons. All rights reserved.</p>
+        <p>&copy; {currentYear} STRUCPROOF by Rasankar & Son's. All rights reserved.</p>
         <div className="footer__bottom-links">
           <a href="#" className="footer__bottom-link">Privacy Policy</a>
           <a href="#" className="footer__bottom-link">Terms of Service</a>

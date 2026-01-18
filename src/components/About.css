@@ -102,11 +102,13 @@ p {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.74);
 }
 
-.hero-content p:nth-child(2) {
+.hero-content p:nth-child(2),
+.hero-content p:nth-child(3) {
   font-size: 1.1rem;
   color: #b3e5ff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
+
 
 @keyframes fadeInHero {
   to { opacity: 1; transform: translateY(0); }
@@ -361,18 +363,31 @@ p {
   margin-bottom: 6px;
 }
 
-.leader-card p:nth-of-type(1) {
+.leader-role {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #0077bb;
+  color: #0077bb;   /* SAME blue for both */
   margin-bottom: 8px;
 }
 
-.leader-card p:nth-of-type(2) {
+.leader-details {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.5;
 }
+
+.leader-education {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 4px 0 2px;
+  font-style: italic;
+}
+
+.leader-card .leader-role {
+  color: #0077bb !important;
+}
+
 
 /* ================================
    Why Choose Us Section

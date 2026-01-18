@@ -87,12 +87,12 @@ const Project = () => {
   ];
 
   const processSteps = [
-    { title: 'Site Visit & Analysis', description: 'We inspect and diagnose root problems', icon: <FaSearch /> },
-    { title: 'Custom Proposal', description: 'Based on site needs, budget & structure', icon: <FaClipboardList /> },
-    { title: 'Material Selection', description: 'Industry-certified products', icon: <FaTools /> },
-    { title: 'Execution by Experts', description: 'Trained teams using proper methods', icon: <FaCheckCircle /> },
-    { title: 'Quality Check & Testing', description: 'Leak check and assurance', icon: <FaShieldAlt /> },
-    { title: 'Warranty & After-Support', description: '10-year warranty + service backup', icon: <FaHeadset /> },
+    { title: '1.Site Visit & Analysis', description: 'We inspect and diagnose root problems', icon: <FaSearch /> },
+    { title: '2.Custom Proposal', description: 'Based on site needs, budget & structure', icon: <FaClipboardList /> },
+    { title: '3.Material Selection', description: 'Industry-certified products', icon: <FaTools /> },
+    { title: '4.Execution by Experts', description: 'Trained teams using proper methods', icon: <FaCheckCircle /> },
+    { title: '5.Quality Check & Testing', description: 'Leak check and assurance', icon: <FaShieldAlt /> },
+    { title: '6.Warranty & After-Support', description: '10-year warranty + service backup', icon: <FaHeadset /> },
   ];
 
   return (

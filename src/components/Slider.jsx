@@ -1,46 +1,47 @@
 import React from "react";
 import "./Slider.css";
-import { Link } from "react-router-dom";
-import heroImg from "../assets/WaterproofHero1.png"; // Use the generated image
+import heroImg from "../assets/WaterproofHero2.jpeg";
+import logoImg from "../assets/logo.png"; // Your new logo from the image
 
 const Slider = () => {
   return (
     <section className="hero-section" id="home">
-      
-      {/* Hero Background */}
       <div
         className="hero-background"
         style={{ backgroundImage: `url(${heroImg})` }}
-      ></div>
-
-      {/* Overlay for text readability */}
+      />
       <div className="hero-overlay"></div>
 
-      {/* Content */}
       <div className="hero-content">
-        <h1 className="hero-title">STRUCPROOF</h1>
-        <span className="hero-subtitle">By Rasankar and Sons</span>
+        {/* 1. Logo replaces the old title */}
+        <img src={logoImg} alt="Strucproof Logo" className="hero-logo" />
 
-        <div className="hero-highlight">
-          <span className="blue-text">Waterproofing Consultant</span>
-          <span className="green-box">and Chemicals</span>
+        
+        {/* 3. The thin blue line from the image */}
+        <div className="hero-divider"></div>
+
+        {/* 2. Text with specific colors from your image */}
+        <div className="hero-tagline">
+          <span className="text-blue">Waterproofing consultant & </span>
+          <span className="text-green">Chemicals</span>
         </div>
 
-        <div className="hero-line"></div>
+        {/* Subtitle */}
+<span className="hero-subtitle">By Rasankar and Son's</span>
 
-        <p className="hero-description">
+{/* Line under subtitle */}
+<div className="hero-subtitle-line"></div>
+
+
+
+        {/* <p className="hero-description">
           Terrace, W.C. & Bath, Basement & Wall,<br />
           Chemical Waterproofing
-        </p>
+        </p> */}
 
-        {/* <div className="hero-sub-text">
-          From high-rise buildings to industrial sheds, we provide waterproofing that lasts —<br />
-          backed by 35+ years of proven expertise and a 10-year service warranty.
-        </div> */}
         <a href="#ContactUs" className="hero-btn">
-  Explore More
-</a>
-
+          Explore More
+        </a>
       </div>
     </section>
   );
