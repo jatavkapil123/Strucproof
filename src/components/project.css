@@ -77,7 +77,7 @@
 }
 
 /* =======================
-   PROJECT SLIDER FIXED DESIGN (UPDATED)
+   PROJECT SLIDER DESIGN
 ======================= */
 .projects-container {
   width: 95%;
@@ -123,28 +123,6 @@
   flex-direction: column;
 }
 
-/* Responsive project cards */
-@media (max-width: 768px) {
-  .project-card {
-    max-width: 280px;
-    min-height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card {
-    max-width: 260px;
-    min-height: 380px;
-  }
-}
-
-@media (max-width: 360px) {
-  .project-card {
-    max-width: 240px;
-    min-height: 360px;
-  }
-}
-
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -155,25 +133,6 @@
   height: 240px;
   object-fit: cover;
   border-bottom: 1px solid #e5e7eb;
-}
-
-/* Responsive project images */
-@media (max-width: 768px) {
-  .project-image {
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-image {
-    height: 180px;
-  }
-}
-
-@media (max-width: 360px) {
-  .project-image {
-    height: 160px;
-  }
 }
 
 .project-info {
@@ -205,7 +164,7 @@
 /* Slick arrows - HIDE ALL ARROWS */
 .slick-prev,
 .slick-next {
-  display: none !important; /* Completely hide all arrows */
+  display: none !important;
 }
 
 /* Dots */
@@ -220,28 +179,6 @@
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .projects-container {
-    padding: 40px 0;
-  }
-
-  .slider-wrapper {
-    padding: 0 30px;
-  }
-
-  /* Arrow styles removed - arrows are hidden */
-
-  .project-card {
-    max-width: 280px;
-    min-height: 400px;
-  }
-
-  .project-image {
-    height: 200px;
-  }
 }
 
 /* =======================
@@ -386,39 +323,6 @@
 }
 
 /* =======================
-   PRODUCT DETAILS CARD
-======================= */
-.product-details-card {
-  margin-top: 50px;
-  background: linear-gradient(135deg, #ffffff, #f9fafb);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  position: relative;
-  animation: fadeInDetails 0.6s ease;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: #ff4d4f;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.close-btn:hover {
-  background: #d9363e;
-}
-
-/* =======================
    ANIMATIONS
 ======================= */
 @keyframes fadeIn {
@@ -455,55 +359,30 @@
   }
 }
 
-@keyframes fadeInDetails {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* =======================
    RESPONSIVE DESIGN
 ======================= */
 
-/* Large tablets */
-@media (max-width: 1199px) {
-  .projects-container {
-    width: 98%;
-    max-width: 1300px;
-    padding: 50px 0;
-  }
-
-  .slider-wrapper {
-    padding: 0 50px;
-  }
-
-  .project-card {
-    max-width: 320px;
-    min-height: 420px;
-  }
-
-  .project-image {
-    height: 220px;
-  }
-
-  /* Arrow styles removed - arrows are hidden */
-  
-  .section-title {
-    font-size: 2.2rem;
-  }
-  
-  .industry-card {
-    padding: 25px 18px;
-  }
-}
-
 /* Tablets */
 @media (max-width: 768px) {
+  .proven-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .sub {
+    font-size: 1.8rem;
+  }
+  
+  .project-list {
+    max-width: 90%;
+  }
+  
+  .project-item {
+    font-size: 1rem;
+    padding: 10px 15px;
+    max-width: 100%;
+  }
+  
   .projects-container {
     padding: 40px 0;
     width: 100%;
@@ -512,8 +391,6 @@
   .slider-wrapper {
     padding: 0 30px;
   }
-
-  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 280px;
@@ -572,6 +449,20 @@
 
 /* Mobile devices */
 @media (max-width: 480px) {
+  .proven-section {
+    padding: 2.5rem 1rem;
+  }
+  
+  .sub {
+    font-size: 1.5rem;
+  }
+  
+  .project-item {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    margin: 10px auto;
+  }
+  
   .projects-container {
     padding: 30px 0;
     margin: 40px auto;
@@ -580,12 +471,6 @@
   .slider-wrapper {
     padding: 0 20px;
   }
-
-  .slick-prev {
-    /* Arrow positioning removed - arrows are hidden */
-  }
-
-  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 260px;
@@ -660,6 +545,19 @@
 
 /* Small mobile devices */
 @media (max-width: 360px) {
+  .proven-section {
+    padding: 2rem 0.75rem;
+  }
+  
+  .sub {
+    font-size: 1.3rem;
+  }
+  
+  .project-item {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  
   .projects-container {
     padding: 25px 0;
     margin: 30px auto;
@@ -668,8 +566,6 @@
   .slider-wrapper {
     padding: 0 15px;
   }
-
-  /* Arrow styles removed - arrows are hidden */
 
   .project-card {
     max-width: 240px;

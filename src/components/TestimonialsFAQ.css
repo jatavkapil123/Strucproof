@@ -179,7 +179,7 @@ body {
   .testimonial-card:nth-child(2) {
     animation-delay: 0.2s;
   }
-  
+
 /* Responsive Design */
 
 /* Large tablets */
@@ -231,6 +231,10 @@ body {
   .section-title {
     font-size: 2rem;
     margin-bottom: 30px;
+  }
+  
+  .carousel {
+    gap: 30px;
   }
   
   .testimonial-card {
@@ -287,6 +291,10 @@ body {
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 25px;
+  }
+  
+  .carousel {
+    gap: 25px;
   }
   
   .testimonial-card {
@@ -355,6 +363,10 @@ body {
     margin-bottom: 20px;
   }
   
+  .carousel {
+    gap: 20px;
+  }
+  
   .testimonial-card {
     padding: 15px;
     max-width: 350px;
@@ -395,4 +407,3 @@ body {
     font-size: 0.85rem;
   }
 }
-  

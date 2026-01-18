@@ -22,41 +22,12 @@
   font-family: var(--font-heading);
 }
 
-/* Responsive footer padding */
-@media (max-width: 768px) {
-  .footer {
-    padding: 40px var(--spacing-md) var(--spacing-md);
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 30px var(--spacing-sm) var(--spacing-sm);
-  }
-}
-
 /* Grid Layout */
 .footer__content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
-}
-
-/* Responsive footer grid */
-@media (max-width: 768px) {
-  .footer__content {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-  }
-}
-
-@media (max-width: 480px) {
-  .footer__content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    text-align: center;
-  }
 }
 
 .footer__section {
@@ -208,8 +179,13 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .footer {
+    padding: 40px var(--spacing-md) var(--spacing-md);
+  }
+  
   .footer__content {
     grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
   }
 
   .footer__section:first-child {
@@ -221,11 +197,25 @@
     gap: var(--spacing-md);
     text-align: center;
   }
+  
+  .footer__title {
+    font-size: 1.8rem;
+  }
+  
+  .footer__subtitle {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .footer {
+    padding: 30px var(--spacing-sm) var(--spacing-sm);
+  }
+  
   .footer__content {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    text-align: center;
   }
 
   .footer__social {
@@ -234,5 +224,58 @@
 
   .footer__warranty-badge {
     margin: 0 auto;
+  }
+  
+  .footer__title {
+    font-size: 1.6rem;
+  }
+  
+  .footer__subtitle {
+    font-size: 1rem;
+  }
+  
+  .footer__description {
+    font-size: 0.9rem;
+  }
+  
+  .footer__contact-item {
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+  
+  .footer__link {
+    font-size: 0.9rem;
+  }
+  
+  .footer__service {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 25px var(--spacing-xs) var(--spacing-xs);
+  }
+  
+  .footer__title {
+    font-size: 1.4rem;
+  }
+  
+  .footer__subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .footer__description {
+    font-size: 0.85rem;
+  }
+  
+  .footer__contact-item {
+    font-size: 0.85rem;
+  }
+  
+  .footer__social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
 }
