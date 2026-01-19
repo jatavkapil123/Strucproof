@@ -254,10 +254,12 @@ body {
 /* Panel Images */
 .slide-panel .panel-images {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-wrap: nowrap;
+  gap: 20px;
   justify-content: center;
   align-items: center;
+  overflow-x: auto;
+  padding: 10px 0;
 }
 
 .slide-panel .panel-images img {
@@ -268,51 +270,70 @@ body {
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slide-panel .panel-images img:hover {
   transform: scale(1.1) rotate(2deg);
 }
 
-/* Mobile image adjustments */
+/* Mobile image adjustments - VERTICAL LAYOUT */
 @media (max-width: 768px) {
   .slide-panel .panel-images {
-    gap: 10px;
+    flex-direction: column; /* Change to vertical layout */
+    gap: 15px;
     justify-content: center;
+    align-items: center;
+    overflow-x: visible; /* Remove horizontal scroll */
+    overflow-y: visible;
+    padding: 15px 0;
+    /* Remove horizontal scrolling */
+    -webkit-overflow-scrolling: auto;
   }
   
   .slide-panel .panel-images img {
-    width: 100px;
-    height: 75px;
-    border-radius: 8px;
+    width: 200px; /* Make images larger for better visibility */
+    height: 150px;
+    border-radius: 10px;
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 480px) {
   .slide-panel .panel-images {
-    gap: 8px;
-    flex-wrap: wrap;
+    flex-direction: column; /* Vertical layout */
+    gap: 12px;
     justify-content: center;
+    align-items: center;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 12px 0;
   }
   
   .slide-panel .panel-images img {
-    width: 85px;
-    height: 60px;
-    border-radius: 6px;
+    width: 180px; /* Good size for small screens */
+    height: 135px;
+    border-radius: 8px;
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 360px) {
   .slide-panel .panel-images {
-    gap: 6px;
-    flex-wrap: wrap;
+    flex-direction: column; /* Vertical layout */
+    gap: 10px;
     justify-content: center;
+    align-items: center;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 10px 0;
   }
   
   .slide-panel .panel-images img {
-    width: 70px;
-    height: 50px;
-    border-radius: 5px;
+    width: 160px; /* Appropriate size for very small screens */
+    height: 120px;
+    border-radius: 6px;
+    flex-shrink: 0;
   }
 }
 
