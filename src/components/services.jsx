@@ -134,10 +134,18 @@ const Services = () => {
   /* Prevent body scroll when panel is open */
   useEffect(() => {
     if (activeIndex !== null) {
+      document.body.classList.add("modal-open");
       document.body.style.overflow = "hidden";
     } else {
+      document.body.classList.remove("modal-open");
       document.body.style.overflow = "auto";
     }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("modal-open");
+      document.body.style.overflow = "auto";
+    };
   }, [activeIndex]);
 
   return (
@@ -170,6 +178,12 @@ const Services = () => {
             />
             <motion.div
               className="slide-panel"
+              style={{
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)'
+              }}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
