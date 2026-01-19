@@ -263,8 +263,8 @@ body {
 }
 
 .slide-panel .panel-images img {
-  width: 200px;
-  height: 150px;
+  width: 220px; /* Increased from 200px */
+  height: 165px; /* Increased from 150px */
   object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
@@ -281,20 +281,20 @@ body {
 @media (max-width: 768px) {
   .slide-panel .panel-images {
     flex-direction: column; /* Change to vertical layout */
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     overflow-x: visible; /* Remove horizontal scroll */
     overflow-y: visible;
-    padding: 15px 0;
+    padding: 20px 0;
     /* Remove horizontal scrolling */
     -webkit-overflow-scrolling: auto;
   }
   
   .slide-panel .panel-images img {
-    width: 200px; /* Make images larger for better visibility */
-    height: 150px;
-    border-radius: 10px;
+    width: 280px; /* Increased from 200px */
+    height: 210px; /* Increased from 150px */
+    border-radius: 12px;
     flex-shrink: 0;
   }
 }
@@ -302,18 +302,18 @@ body {
 @media (max-width: 480px) {
   .slide-panel .panel-images {
     flex-direction: column; /* Vertical layout */
-    gap: 12px;
+    gap: 18px;
     justify-content: center;
     align-items: center;
     overflow-x: visible;
     overflow-y: visible;
-    padding: 12px 0;
+    padding: 18px 0;
   }
   
   .slide-panel .panel-images img {
-    width: 180px; /* Good size for small screens */
-    height: 135px;
-    border-radius: 8px;
+    width: 250px; /* Increased from 180px */
+    height: 188px; /* Increased from 135px */
+    border-radius: 10px;
     flex-shrink: 0;
   }
 }
@@ -321,18 +321,18 @@ body {
 @media (max-width: 360px) {
   .slide-panel .panel-images {
     flex-direction: column; /* Vertical layout */
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
     overflow-x: visible;
     overflow-y: visible;
-    padding: 10px 0;
+    padding: 15px 0;
   }
   
   .slide-panel .panel-images img {
-    width: 160px; /* Appropriate size for very small screens */
-    height: 120px;
-    border-radius: 6px;
+    width: 220px; /* Increased from 160px */
+    height: 165px; /* Increased from 120px */
+    border-radius: 8px;
     flex-shrink: 0;
   }
 }
